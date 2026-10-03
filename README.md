@@ -11,6 +11,8 @@ A simple desktop app for playing MP3 files, built with Electron.
 
 [View the live demo](https://itsiamdev.github.io/audio-player-app/) · [Report an issue](https://github.com/itsiamdev/audio-player-app/issues)
 
+> 💡 Inspired by this video tutorial: [Build a Simple Audio Player with Electron](https://youtu.be/IzONNPX-tE4)
+
 </div>
 
 ---
