@@ -1,47 +1,51 @@
 # Audio Player App
 
-Aplicație desktop simplă pentru redarea fișierelor MP3, construită cu Electron.
+A simple desktop app for playing MP3 files, built with Electron.
 
 ## Screenshot
 
 ![Audio Player App](images/image.png)
 
-
 ## Tech stack
 
-- **Electron** (`^44.5.1`) — procesul principal creează fereastra și dialogul de alegere a fișierului
-- **HTML / CSS / JavaScript** — interfața din `index.html`, stilurile din `styles/main.css`, logica din `scripts/app.js`
-- **Node.js** — folosit de procesul principal (`index.js`) și de preload script
-- Fără framework-uri sau dependințe runtime suplimentare
+- **Electron** (`^44.5.1`) — the main process creates the window and the native file dialog
+- **HTML / CSS / JavaScript** — UI in `index.html`, styles in `styles/main.css`, logic in `scripts/app.js`
+- **Node.js** — used by the main process (`index.js`) and the preload script
+- No frameworks or extra runtime dependencies
 
-## Ce face aplicația
+## What the app does
 
-- Deschide un fișier MP3 de pe disc printr-un dialog nativ al sistemului
-- Redă / oprește piesa cu butonul Play / Pause
-- Afișează timpul curent și durata totală în format `mm:ss`
-- Ferestre de 600x280 px, fără meniu vizibil
+- Opens an MP3 file from disk through the native system dialog
+- Plays / pauses the track with the Play / Pause button
+- Shows the current time and total duration in `mm:ss` format
+- Runs in a 600x280 px window with a hidden menu bar
 
-## Structura proiectului
+## Project structure
 
 ```
 audio-player-app/
-├── index.js          # procesul principal Electron: fereastra + dialogul de fișiere
-├── preload.js        # bridge securizat (contextBridge) expune window.electronAPI
-├── index.html        # interfața aplicației
-├── styles/main.css   # stilurile paginii
-├── scripts/app.js    # logica playerului (Audio API)
+├── index.js          # Electron main process: window + file dialog
+├── preload.js        # secure bridge (contextBridge) exposing window.electronAPI
+├── index.html        # app UI
+├── styles/main.css   # page styles
+├── scripts/app.js    # player logic (Audio API)
+├── images/           # assets used in this README
 └── package.json
 ```
 
-## Instalare și rulare
+## Installation and usage
 
-Cerințe: [Node.js](https://nodejs.org) (care include npm).
+Requirements: [Node.js](https://nodejs.org) (which includes npm).
 
 ```bash
-npm install     # instalează dependențele (Electron)
-npm start       # pornește aplicația
+npm install     # install dependencies (Electron)
+npm start       # launch the app
 ```
 
-## Licență
+## Links
 
-ISC
+- Live demo: [itsiamdev.github.io/audio-player-app](https://itsiamdev.github.io/audio-player-app/)
+
+## License
+
+[ISC](LICENSE)
